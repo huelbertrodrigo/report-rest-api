@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="alpine"/>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="server.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="75" Y="11"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="..\..\lazarus\fpcsrc\rtl\unix\sysutils.pp"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+    </Units>
+    <JumpHistory Count="2" HistoryIndex="1">
+      <Position1>
+        <Filename Value="server.lpr"/>
+        <Caret Line="31" Column="21"/>
+      </Position1>
+      <Position2>
+        <Filename Value="server.lpr"/>
+        <Caret Line="25" Column="23"/>
+      </Position2>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
