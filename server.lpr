@@ -6,7 +6,8 @@ uses
   {$IFDEF UNIX}
   cthreads,
   {$ENDIF}
-  Horse, SysUtils;
+  Horse,
+  SysUtils;
 
 procedure GetHome(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
 begin
