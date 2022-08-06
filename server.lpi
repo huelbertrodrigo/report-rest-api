@@ -15,9 +15,9 @@
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
-    <BuildModes Count="3">
-      <Item1 Name="win32" Default="True"/>
-      <Item2 Name="win64">
+    <BuildModes Count="2">
+      <Item1 Name="windows" Default="True"/>
+      <Item2 Name="alpine">
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -26,27 +26,14 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="modules\.dcp;modules\.dcu;modules;modules\horse\src"/>
+            <OtherUnitFiles Value="modules\.dcp;modules\.dcu;modules;modules\horse\src;modules\horse-compression\src;modules\horse-octet-stream\src"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
-          <CodeGeneration>
-            <TargetCPU Value="x86_64"/>
-            <TargetOS Value="win64"/>
-          </CodeGeneration>
-        </CompilerOptions>
-      </Item2>
-      <Item3 Name="alpine">
-        <CompilerOptions>
-          <Version Value="11"/>
-          <PathDelim Value="\"/>
-          <Target>
-            <Filename Value="bin\server-$(TargetOS)"/>
-          </Target>
-          <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="modules\.dcp;modules\.dcu;modules;modules\horse\src"/>
-            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
-          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <SyntaxMode Value="Delphi"/>
+            </SyntaxOptions>
+          </Parsing>
           <CodeGeneration>
             <TargetCPU Value="x86_64"/>
             <TargetOS Value="linux"/>
@@ -58,7 +45,7 @@
             </Debugging>
           </Linking>
         </CompilerOptions>
-      </Item3>
+      </Item2>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
@@ -82,7 +69,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="modules\.dcp;modules\.dcu;modules;modules\horse\src"/>
+      <OtherUnitFiles Value="modules\.dcp;modules\.dcu;modules;modules\horse\src;modules\horse-compression\src;modules\horse-octet-stream\src"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <CodeGeneration>
