@@ -6,6 +6,8 @@
 	"mainsrc": "./",
 	"projects": [],
 	"dependencies": {
-		"github.com/hashload/horse": "^3.0.2"
+		"github.com/hashload/horse": "^3.0.2",
+		"github.com/hashload/horse-compression": "^1.1.7",
+		"github.com/hashload/horse-octet-stream": "^1.9.7"
 	}
 }

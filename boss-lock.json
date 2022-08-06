@@ -9,6 +9,22 @@
 			"artifacts": {},
 			"failed": false,
 			"changed": false
+		},
+		"github.com/hashload/horse-compression": {
+			"name": "horse-compression",
+			"version": "1.1.7",
+			"hash": "9e9d52e889e76f68fedea0f9740eb36c",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"github.com/hashload/horse-octet-stream": {
+			"name": "horse-octet-stream",
+			"version": "1.9.7",
+			"hash": "9ffd725b22a51e24a5f4b10e8bbf47d8",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
 		}
 	}
 }
