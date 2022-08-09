@@ -18,15 +18,18 @@
     <BuildModes Count="2">
       <Item1 Name="windows" Default="True"/>
       <Item2 Name="alpine">
+        <MacroValues Count="1">
+          <Macro1 Name="LCLWidgetType" Value="nogui"/>
+        </MacroValues>
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="bin\server-$(TargetOS)"/>
+            <Filename Value="server-$(TargetOS)"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="modules\.dcp;modules\.dcu;modules;modules\horse\src;modules\horse-compression\src;modules\horse-octet-stream\src"/>
+            <OtherUnitFiles Value="src;modules\.dcp;modules\.dcu;modules;modules\horse\src;modules\horse-octet-stream\src"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
@@ -41,11 +44,19 @@
           <Linking>
             <Debugging>
               <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf2Set"/>
               <UseLineInfoUnit Value="False"/>
             </Debugging>
           </Linking>
+          <Other>
+            <CustomOptions Value="-dNOGUI
+-dUseCThreads"/>
+          </Other>
         </CompilerOptions>
       </Item2>
+      <SharedMatrixOptions Count="1">
+        <Item1 ID="399533433005" Modes="alpine" Type="IDEMacro" MacroName="LCLWidgetType" Value="nogui"/>
+      </SharedMatrixOptions>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
@@ -54,22 +65,54 @@
     <RunParams>
       <FormatVersion Value="2"/>
     </RunParams>
-    <Units Count="1">
+    <RequiredPackages Count="3">
+      <Item1>
+        <PackageName Value="LCLBase"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="zcomponent"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="frce"/>
+      </Item3>
+    </RequiredPackages>
+    <Units Count="5">
       <Unit0>
         <Filename Value="server.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
+      <Unit1>
+        <Filename Value="src\uControllers.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="src\uDMConnection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="src\uReport.Base.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ReportBase"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="src\uReport.Person.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="bin\server-$(TargetOS)"/>
+      <Filename Value="server-$(TargetOS)"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="modules\.dcp;modules\.dcu;modules;modules\horse\src;modules\horse-compression\src;modules\horse-octet-stream\src"/>
+      <OtherUnitFiles Value="src;modules\.dcp;modules\.dcu;modules;modules\horse\src;modules\horse-octet-stream\src"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <CodeGeneration>
