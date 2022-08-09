@@ -1,0 +1,18 @@
+object DMConnection: TDMConnection
+  OldCreateOrder = False
+  Height = 179
+  HorizontalOffset = 446
+  VerticalOffset = 255
+  Width = 292
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=ON'
+    )
+    BeforeConnect = ZConnectionBeforeConnect
+    Port = 0
+    Left = 40
+    Top = 24
+  end
+end

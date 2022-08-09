@@ -1,0 +1,120 @@
+inherited ReportPerson: TReportPerson
+  DesignLeft = 564
+  DesignTop = 140
+  inherited RLReport: TRLReport
+    DataSource = dsPerson
+    BeforePrint = RLReportBeforePrint
+    inherited bandFooter: TRLBand
+      Top = 110
+    end
+    object bandColumnHeader: TRLBand[2]
+      Left = 38
+      Height = 16
+      Top = 78
+      Width = 718
+      BandType = btColumnHeader
+      object RLLabel1: TRLLabel
+        Left = 0
+        Height = 16
+        Top = 0
+        Width = 16
+        Caption = 'ID'
+      end
+      object RLLabel2: TRLLabel
+        Left = 48
+        Height = 16
+        Top = 0
+        Width = 66
+        Caption = 'First name'
+      end
+      object RLLabel3: TRLLabel
+        Left = 232
+        Height = 16
+        Top = 0
+        Width = 65
+        Caption = 'Last name'
+      end
+      object RLLabel4: TRLLabel
+        Left = 416
+        Height = 16
+        Top = 0
+        Width = 37
+        Caption = 'Email'
+      end
+      object RLLabel5: TRLLabel
+        Left = 640
+        Height = 16
+        Top = 0
+        Width = 46
+        Caption = 'Gender'
+      end
+    end
+    object bandDetail: TRLBand[3]
+      Left = 38
+      Height = 16
+      Top = 94
+      Width = 718
+      object txtId: TRLDBText
+        Left = 0
+        Height = 16
+        Top = 0
+        Width = 42
+        AutoSize = False
+        DataField = 'id'
+        DataSource = dsPerson
+      end
+      object txtFirstName: TRLDBText
+        Left = 48
+        Height = 16
+        Top = 0
+        Width = 176
+        AutoSize = False
+        DataField = 'first_name'
+        DataSource = dsPerson
+      end
+      object txtLastName: TRLDBText
+        Left = 232
+        Height = 16
+        Top = 0
+        Width = 176
+        AutoSize = False
+        DataField = 'last_name'
+        DataSource = dsPerson
+      end
+      object txtEmail: TRLDBText
+        Left = 416
+        Height = 16
+        Top = 0
+        Width = 208
+        AutoSize = False
+        DataField = 'email'
+        DataSource = dsPerson
+      end
+      object txtGender: TRLDBText
+        Left = 640
+        Height = 16
+        Top = 0
+        Width = 66
+        AutoSize = False
+        DataField = 'gender'
+        DataSource = dsPerson
+      end
+    end
+  end
+  inherited RLPDFFilter: TRLPDFFilter
+    Left = 592
+  end
+  object dsPerson: TDataSource[2]
+    DataSet = ZQuery
+    Left = 712
+    Top = 24
+  end
+  object ZQuery: TZQuery[3]
+    SQL.Strings = (
+      'select * from person order by id'
+    )
+    Params = <>
+    Left = 656
+    Top = 24
+  end
+end

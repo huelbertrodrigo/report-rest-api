@@ -1,0 +1,69 @@
+object ReportBase: TReportBase
+  Left = 0
+  Height = 1061
+  Top = 0
+  Width = 794
+  ClientHeight = 1061
+  ClientWidth = 794
+  TabOrder = 0
+  DesignLeft = 530
+  DesignTop = 121
+  object RLReport: TRLReport
+    Left = 0
+    Height = 1123
+    Top = 0
+    Width = 794
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    object bandHeader: TRLBand
+      Left = 38
+      Height = 40
+      Top = 38
+      Width = 718
+      BandType = btHeader
+      object lblTitle: TRLLabel
+        Left = 0
+        Height = 40
+        Top = 0
+        Width = 718
+        Align = faClient
+        Alignment = taCenter
+        Caption = 'Report title'
+        Font.Color = clBlack
+        Font.Height = -27
+        Font.Name = 'Calibri'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+    object bandFooter: TRLBand
+      Left = 38
+      Height = 16
+      Top = 78
+      Width = 718
+      BandType = btFooter
+      object lblDate: TRLLabel
+        Left = 0
+        Height = 16
+        Top = 0
+        Width = 74
+        Caption = 'Date: (Date)'
+      end
+      object lblTime: TRLLabel
+        Left = 643
+        Height = 16
+        Top = 0
+        Width = 75
+        Alignment = taRightJustify
+        Caption = 'Time: (Hour)'
+      end
+    end
+  end
+  object RLPDFFilter: TRLPDFFilter
+    DocumentInfo.Creator = 'FortesReport Community Edition v4.0.0.1 \251 Copyright © 1999-2021 Fortes Informática'
+    DisplayName = 'Documento PDF'
+    Left = 720
+    Top = 24
+  end
+end
