@@ -1,7 +1,11 @@
 # Lazarus folders
-backup
-bin
-lib
+backup/
+lib/
+
+# Lazarus files
+*.res
+server-*
+report-*
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
