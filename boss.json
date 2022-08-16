@@ -1,6 +1,6 @@
 {
-  "name": "server-report-lazarus",
-  "description": "Server report with Lazarus",
+  "name": "report-rest-api",
+  "description": "Report REST API with Lazarus",
   "version": "1.0.0",
   "homepage": "",
   "mainsrc": "./",

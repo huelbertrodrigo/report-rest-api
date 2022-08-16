@@ -1,10 +1,13 @@
-# Server report with Lazarus
+# Report REST API with Lazarus
 
-Reporting server in Lazarus.
+REST API server for creating and managing reports with Lazarus.
 
-## Components used:
+## Lazarus and components used:
 
+- Lazarus - [link](https://github.com/LongDirtyAnimAlf/fpcupdeluxe)
 - Horse - [link](https://github.com/HashLoad/horse)
+- FortesReport CE - [link](https://github.com/fortesinformatica/fortesreport-ce)
+- ZeosLib - [link](https://sourceforge.net/projects/zeoslib/)
 
 ## Docker commands
 
