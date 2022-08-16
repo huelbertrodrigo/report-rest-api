@@ -1,4 +1,4 @@
-# Container report with Lazarus
+# Server report with Lazarus
 
 Reporting server in Lazarus.
 

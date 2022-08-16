@@ -1,12 +1,12 @@
 {
-	"name": "container-report-lazarus",
-	"description": "",
-	"version": "1.0.0",
-	"homepage": "",
-	"mainsrc": "./",
-	"projects": [],
-	"dependencies": {
-		"github.com/hashload/horse": "^3.0.2",
-		"github.com/hashload/horse-octet-stream": "^1.9.7"
-	}
+  "name": "server-report-lazarus",
+  "description": "Server report with Lazarus",
+  "version": "1.0.0",
+  "homepage": "",
+  "mainsrc": "./",
+  "projects": [],
+  "dependencies": {
+    "github.com/hashload/horse": "^3.0.2",
+    "github.com/hashload/horse-octet-stream": "^1.9.7"
+  }
 }
