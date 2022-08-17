@@ -28,7 +28,7 @@ var
   LStream: TFileStream;
 begin
   try
-    LStream := TFileStream.Create('./report.pdf', fmOpenRead);
+    LStream := TFileStream.Create('reports/report.pdf', fmOpenRead);
     Res.SendFile(LStream, 'report.pdf', 'application/pdf');
   finally
     LStream.Free;
